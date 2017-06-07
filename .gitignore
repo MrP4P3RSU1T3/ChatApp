@@ -111,3 +111,5 @@ Thumbs.db
 *.dll
 *.exe
 
+# qml complile file
+*.qmlc
