@@ -1,4 +1,9 @@
-import QtQuick 2.8
+import QtQuick 2.9
+import QtQuick.Layouts 1.3
+import QtQuick.Controls 2.2
+import QtQuick.Controls.Material 2.1
+import QtQuick.Controls.Universal 2.1
+import Qt.labs.settings 1.0
 import QtQuick.Window 2.2
 
 Window {
@@ -8,11 +13,30 @@ Window {
     width: base*16
     height: base*9
     title: qsTr("Chat App")
-    LeftMenu{
-        id:leftMenu
+    Row{
+        LeftMenu{}
+
+        Column{
+            Search{}
+            MiddleItem{}
+            MiddleItem{}
+            MiddleItem{}
+            MiddleItem{}
+            MiddleItem{}
+            MiddleItem{}
+            MiddleItem{}
+
+        }
+
+        Column{
+            RightHeader{}
+            OtherMessage{}
+            MyMessage{}
+            OtherMessage{}
+            OtherMessage{}
+            OtherMessage{}
+            RightBottom{}
+        }
     }
-    MiddleContainer{
-        id:middleContainer
-        anchors.left: leftMenu.right
-    }
+
 }
