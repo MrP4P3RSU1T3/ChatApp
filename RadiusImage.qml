@@ -7,7 +7,7 @@ Item {
     height: base
     Image {
         id: imageView
-        source: "./images/avator.jpg"
+        source: "./images/此图装逼用.jpg"
         sourceSize: Qt.size(parent.width, parent.height)
         visible: false
     }
