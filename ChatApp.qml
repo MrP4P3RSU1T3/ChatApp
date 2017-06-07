@@ -7,4 +7,9 @@ Window {
     width: base*16
     height: base*9
     title: qsTr("Chat App")
+    Row{
+        LeftMenu{
+
+        }
+    }
 }
