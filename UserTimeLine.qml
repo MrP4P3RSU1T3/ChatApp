@@ -1,12 +1,11 @@
-import QtQuick 2.0
-
+import QtQuick 2.8
+import QtQuick.Layouts 1.3
+import QtQuick.Controls 2.2
 Rectangle {
     id:root
     property int base: 100
-    width: base*5
+    width: base*4
     height: base*9
-    border.color: "black"
-    border.width: 1
     Column{
         width: parent.width
         Rectangle{
@@ -44,14 +43,29 @@ Rectangle {
                     RadiusImage{}
                     RadiusImage{}
                     RadiusImage{}
+                    RadiusImage{}
                 }
-                Row{
+                Pane{
+                    width: parent.width
                     Text {
                         id: time
+                        anchors.verticalCenter:  parent.verticalCenter
+                        anchors.fill: parent
                         text: qsTr("Yesterday")
                     }
-                    RadiusImage{}
-                    RadiusImage{}
+                    Row{
+                        anchors.right: parent.right
+                        spacing: 20
+                        RadiusImage{
+                            base:25
+                            iconSource: "./images/ic_favorite_border_black_24dp_2x.png"
+                        }
+                        RadiusImage{
+                            id: radiusImage
+                            base:25
+                            iconSource: "./images/ic_chat_bubble_outline_black_24dp_2x.png"
+                        }
+                    }
                 }
 
             }

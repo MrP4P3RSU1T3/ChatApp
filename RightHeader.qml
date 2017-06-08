@@ -2,7 +2,7 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.1
 
-Item {
+Pane {
     id:root
     property int base: 100
     width: base*10

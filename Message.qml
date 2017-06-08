@@ -2,7 +2,7 @@ import QtQuick 2.0
 
 Rectangle {
     property int base: 100
-    width: base*10
+//    width: base*10
     height: base*1
     Rectangle{
         id: msg
