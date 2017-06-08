@@ -8,7 +8,6 @@ import QtQuick.Window 2.2
 
 Window {
     id:root
-    visible: true
     property int base: 100
     width: base*16
     height: base*9
@@ -39,4 +38,8 @@ Window {
         }
     }
 
+    UserTimeLine{
+        anchors.right: parent.right
+        anchors.top: parent.top
+    }
 }

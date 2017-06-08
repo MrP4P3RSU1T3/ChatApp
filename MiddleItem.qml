@@ -3,7 +3,7 @@ import QtQuick 2.7
 Item {
     id:root
     property int base: 100
-    width: base*4
+    width: base*5
     height: base*1
     Rectangle{
         id:headerImage

@@ -7,7 +7,7 @@ import QtQuick.Controls 2.1
 
 Item {
     property int base: 100
-    width: base*3
+    width: base*10
     height: base*1
    RadiusImage{
        id:headerImage

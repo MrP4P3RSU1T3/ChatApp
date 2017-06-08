@@ -5,7 +5,7 @@ import QtQuick.Controls 2.1
 Item {
     id:root
     property int base: 100
-    width: base*5
+    width: base*10
     height: base*1
 
     Row{

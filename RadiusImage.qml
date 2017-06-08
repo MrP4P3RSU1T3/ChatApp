@@ -1,6 +1,7 @@
 import QtQuick 2.5
 import QtGraphicalEffects 1.0
-
+// refer to http://blog.csdn.net/zjq456123/article/details/51536148
+// another solution http://www.codes51.com/itwd/4104692.html
 Item {
     property int base: 100
     width: base
