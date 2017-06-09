@@ -58,14 +58,14 @@ Window {
             height: root.height
 
             Rectangle {
-                id:search
-                width: base*4
-                height: base*1
-                Rectangle{
+                id: search
+                width: base * 4
+                height: base * 1
+                Rectangle {
                     id: searchInput
-                    width: parent.width-base
-                    height: base/2
-                    anchors.centerIn:parent
+                    width: parent.width - base
+                    height: base / 2
+                    anchors.centerIn: parent
                     radius: 5
                     border.color: "black"
                     border.width: 1
@@ -74,26 +74,24 @@ Window {
                     text: qsTr("Text Input")
                     anchors.centerIn: parent
                 }
-
             }
-            Pane{
+            Pane {
                 width: base
                 height: base
                 anchors.left: search.right
-                Rectangle{
-                    width: base/2
-                    height: base/2
+                Rectangle {
+                    width: base / 2
+                    height: base / 2
                     anchors.centerIn: parent
                     radius: 5
                     border.color: "black"
                     border.width: 1
                 }
-                Label{
+                Label {
                     text: "+"
                     font.pixelSize: 26
                     anchors.centerIn: parent
                 }
-
             }
 
             ListView {
@@ -110,21 +108,32 @@ Window {
             }
         }
         ConversationPage {
+            id:conversationPage
             width: base * 10
             height: base * 9
-            MouseArea {
-                anchors.fill: parent
-                onClicked: {
-                    //                    parent.x+=100
-                    if (!userInfoShow) {
-                        parent.width = base * 6
-                    } else {
-                        parent.width = base * 10
-                    }
+            //            MouseArea {
+            //                anchors.fill: parent
+            //                onClicked: {
+            //                    //                    parent.x+=100
+            //                    if (!userInfoShow) {
+            //                        parent.width = base * 6
+            //                    } else {
+            //                        parent.width = base * 10
+            //                    }
 
-                    userInfoShow = !userInfoShow
+            //                    userInfoShow = !userInfoShow
+            //                }
+            //            }
+            onNicknameClicked: {
+                if (!userInfoShow) {
+                    conversationPage.width = base * 6
+                } else {
+                    conversationPage.width = base * 10
                 }
+
+                userInfoShow = !userInfoShow
             }
+
             Behavior on width {
 
                 NumberAnimation {
@@ -160,4 +169,6 @@ Window {
             }
         }
     }
+    Component.onCompleted: console.log("Completed Running!")
+    Component.onDestruction: console.log("Destruction Beginning!")
 }

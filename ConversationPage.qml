@@ -8,7 +8,7 @@ Item {
     property int base: 100
     height: base * 9
     width: base * 10
-
+    signal nicknameClicked
     ColumnLayout {
         anchors.fill: parent
         anchors.topMargin: header.height
@@ -104,9 +104,15 @@ Item {
             Row {
                 spacing: 20
                 Text {
-                    id: name
+                    id: nickname
                     font.pixelSize: 24
                     text: qsTr("Marie Evans")
+                    MouseArea{
+                        anchors.fill: parent
+                        onClicked: {
+                            emit: nicknameClicked();
+                        }
+                    }
                 }
                 // 小圆点●用Canvas画
                 Rectangle {
