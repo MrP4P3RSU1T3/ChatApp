@@ -2,6 +2,7 @@ import QtQuick 2.6
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.2
 import QtGraphicalEffects 1.0
+
 Item {
     id: root
     property int base: 100
@@ -12,9 +13,6 @@ Item {
         anchors.fill: parent
         anchors.topMargin: header.height
         anchors.bottomMargin: bottom.height
-
-        //        width: parent.width
-        //        width: 500
         ListView {
             id: listView
             Layout.fillWidth: true
@@ -46,7 +44,7 @@ Item {
                     }
                     ColumnLayout {
                         Rectangle {
-                            id:rect
+                            id: rect
                             width: Math.min(
                                        messageText.implicitWidth + 24,
                                        listView.width
@@ -95,7 +93,7 @@ Item {
     }
 
     Pane {
-        id:header
+        id: header
         width: parent.width
         height: base * 1
         ColumnLayout {
@@ -109,7 +107,6 @@ Item {
                     id: name
                     font.pixelSize: 24
                     text: qsTr("Marie Evans")
-
                 }
                 // 小圆点●用Canvas画
                 Rectangle {
@@ -144,11 +141,10 @@ Item {
     }
 
     Pane {
-        id:bottom
+        id: bottom
         width: parent.width
         height: root.base * 1
         anchors.bottom: parent.bottom
-
 
         Pane {
             id: pane
@@ -176,7 +172,4 @@ Item {
             }
         }
     }
-
-
-
 }
