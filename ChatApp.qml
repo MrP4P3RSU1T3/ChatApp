@@ -1,11 +1,11 @@
 import QtQuick 2.8
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.2
-//import QtQuick.Controls.Material 2.1
+import QtQuick.Controls.Material 2.1
 //import QtQuick.Controls.Universal 2.1
 import Qt.labs.settings 1.0
 import QtQuick.Window 2.2
-
+import QtGraphicalEffects 1.0
 Window {
     id:root
     property bool userInfoShow: false
@@ -49,11 +49,11 @@ Window {
             }
             Behavior on width {
 
-                SmoothedAnimation {
+                NumberAnimation {
                     //This specifies how long the animation takes
                     duration: 600
                     //This selects an easing curve to interpolate with, the default is Easing.Linear
-                    easing.type: Easing.OutBounce
+                    easing.type: Easing.InOutCubic
 //                    easing.type: Easing.Linear
                 }
             }
@@ -82,11 +82,11 @@ Window {
         }
         Behavior on x {
 
-            SmoothedAnimation {
+            NumberAnimation {
                 //This specifies how long the animation takes
                 duration: 600
                 //This selects an easing curve to interpolate with, the default is Easing.Linear
-                easing.type: Easing.OutBounce
+                easing.type: Easing.OutElastic
 //                    easing.type: Easing.Linear
             }
         }

@@ -45,6 +45,17 @@ Rectangle {
                     RadiusImage{}
                     RadiusImage{}
                 }
+                Row{
+                    RoundButton{
+                        Image {
+                            width: 50
+                            height: 50
+                            source: "./images/avator.jpg"
+                        }
+
+                    }
+                }
+
                 Pane{
                     width: parent.width
                     Text {

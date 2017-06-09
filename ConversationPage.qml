@@ -1,7 +1,7 @@
 import QtQuick 2.6
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.2
-
+import QtGraphicalEffects 1.0
 Item {
     id: root
     property int base: 100
@@ -44,14 +44,16 @@ Item {
                         iconSource: model.headImageUrl
                         visible: !sentByMe
                     }
-                    Column {
+                    ColumnLayout {
                         Rectangle {
+                            id:rect
                             width: Math.min(
                                        messageText.implicitWidth + 24,
                                        listView.width
                                        - (!sentByMe ? avatar.width + messageRow.spacing : 0))
                             height: messageText.implicitHeight + 24
-                            color: sentByMe ? "lightgrey" : "steelblue"
+                            color: sentByMe ? "lightgrey" : "#63B8FF"
+                            radius: 10
 
                             Label {
                                 id: messageText
@@ -67,6 +69,15 @@ Item {
                             text: model.time
                             color: "lightgrey"
                             anchors.right: sentByMe ? parent.right : undefined
+                        }
+                        DropShadow {
+                            anchors.fill: rect
+                            horizontalOffset: 5
+                            verticalOffset: 5
+                            radius: 8.0
+                            samples: 16
+                            color: "#80000000"
+                            source: rect
                         }
                     }
 
