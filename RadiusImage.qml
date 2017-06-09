@@ -5,7 +5,7 @@ import QtGraphicalEffects 1.0
 Item {
     id:root
     property int base: 100
-    property string iconSource: "./images/此图装逼用.jpg"
+    property string iconSource: "./images/avator.jpg"
     width: base
     height: base
     Image {

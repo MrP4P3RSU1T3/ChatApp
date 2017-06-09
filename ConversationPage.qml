@@ -98,6 +98,7 @@ Page {
                     id: name
                     font.pixelSize: 24
                     text: qsTr("Marie Evans")
+
                 }
                 // 小圆点●用Canvas画
                 Rectangle {
