@@ -10,7 +10,7 @@ Rectangle {
         width: parent.width
         Rectangle{
             width: parent.width
-            height: root.base*3
+            height: root.base*1.5
             RadiusImage{
                 anchors.centerIn: parent
             }

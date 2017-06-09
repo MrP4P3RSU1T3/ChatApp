@@ -32,9 +32,12 @@ Window {
 
         }
         ConversationPage{
+            width: base*10
+            height: base*9
             MouseArea{
                 anchors.fill: parent
                 onClicked: {
+//                    parent.x+=100
                     if(!userInfoShow){
                         parent.width=base*6
                     }else{
@@ -44,14 +47,59 @@ Window {
                     userInfoShow=!userInfoShow
                 }
             }
-        }
+            Behavior on width {
+
+                SmoothedAnimation {
+                    //This specifies how long the animation takes
+                    duration: 600
+                    //This selects an easing curve to interpolate with, the default is Easing.Linear
+                    easing.type: Easing.OutBounce
+//                    easing.type: Easing.Linear
+                }
+            }
 
     }
 
+    }
     UserTimeLine{
         visible: userInfoShow
+//        visible: false
+        opacity: userInfoShow?1:0
         anchors.right: parent.right
-        anchors.top: parent.top
+//        anchors.right: userInfoShow?parent.right : undefined
+//        anchors.left: !userInfoShow? parent.right : undefined
+//        x:userInfoShow?parent.width - this.width:parent.width
+        y:!userInfoShow?parent.height:0
+//        y:-parent.height
+        Behavior on opacity {
+            NumberAnimation {
+                //This specifies how long the animation takes
+                duration: 1000
+                //This selects an easing curve to interpolate with, the default is Easing.Linear
+//                easing.type: Easing.OutBounce
+                easing.type: Easing.Linear
+            }
+        }
+        Behavior on x {
+
+            SmoothedAnimation {
+                //This specifies how long the animation takes
+                duration: 600
+                //This selects an easing curve to interpolate with, the default is Easing.Linear
+                easing.type: Easing.OutBounce
+//                    easing.type: Easing.Linear
+            }
+        }
+        Behavior on y {
+
+            SmoothedAnimation {
+                //This specifies how long the animation takes
+                duration: 800
+                //This selects an easing curve to interpolate with, the default is Easing.Linear
+                easing.type: Easing.OutBounce
+//                    easing.type: Easing.Linear
+            }
+        }
     }
 
 }
