@@ -57,15 +57,19 @@ Rectangle {
                     Row{
                         anchors.right: parent.right
                         spacing: 20
-                        RadiusImage{
-                            base:25
-                            iconSource: "./images/ic_favorite_border_black_24dp_2x.png"
+                        MaterialIcon{
+                            width: 25
+                            height: 25
+                            font.pixelSize: 25
+                            text: "\uE87E"
                         }
-                        RadiusImage{
-                            id: radiusImage
-                            base:25
-                            iconSource: "./images/ic_chat_bubble_outline_black_24dp_2x.png"
+                        MaterialIcon{
+                            width: 25
+                            height: 25
+                            font.pixelSize: 25
+                            text: "\uE0CB"
                         }
+
                     }
                 }
 

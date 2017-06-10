@@ -1,13 +1,18 @@
 import QtQuick 2.0
 
 Rectangle{
-    property string iconFile: "./images/ic_sentiment_very_satisfied_black_24dp_2x.png"
+    id:root
+    property alias text: icon.text
     width: 100
     height: 100
-    Image {
-        id: icon
+    MaterialIcon {
+        id:icon
+//        width: Math.min(parent.width,width)
+//        height: Math.min(parent.height,height)
         anchors.centerIn: parent
-        source: parent.iconFile
+        font.pixelSize: 36
+        color: "grey"
+        text: "\uE0C9"
     }
     MouseArea{
         anchors.fill: parent

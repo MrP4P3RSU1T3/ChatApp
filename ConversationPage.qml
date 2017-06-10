@@ -133,21 +133,13 @@ Item {
             anchors.verticalCenter: parent.verticalCenter
             anchors.right: parent.right
             anchors.rightMargin: 20
-            spacing: 30
-            Image {
-                source: "./images/ic_folder_open_black_24dp_2x.png"
-            }
-            Image {
-                source: "./images/ic_phone_black_24dp_2x.png"
-            }
-            Image {
-                source: "./images/ic_videocam_black_24dp_2x.png"
-            }
+            TabItem{width:70;text: "\uE2C8"}
+            TabItem{width:70;text: "\uE0CD"}
+            TabItem{width:70;text: "\uE04B"}
         }
     }
 
     Pane {
-        id: bottom
         width: parent.width
         height: root.base * 1
         anchors.bottom: parent.bottom
@@ -163,19 +155,9 @@ Item {
         }
         Row {
             anchors.right: parent.right
-            RadiusImage {
-                base: root.base / 2
-                iconSource: "./images/ic_sentiment_very_satisfied_black_24dp_2x.png"
-            }
-            RadiusImage {
-                base: root.base / 2
-                iconSource: "./images/ic_attach_file_black_24dp_2x.png"
-                rotation: 45
-            }
-            RadiusImage {
-                base: root.base / 2
-                iconSource: "./images/ic_send_black_24dp_2x.png"
-            }
+            TabItem{width:50;height:50;text: "\uE815"}
+            TabItem{width:50;height:50;text: "\uE226";rotation: 45}
+            TabItem{width:50;height:50;text: "\uE163"}
         }
     }
 }

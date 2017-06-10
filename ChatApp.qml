@@ -1,7 +1,7 @@
 import QtQuick 2.8
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.2
-import QtQuick.Controls.Material 2.2
+//import QtQuick.Controls.Material 2.2
 //import QtQuick.Controls.Universal 2.1
 import Qt.labs.settings 1.0
 import QtQuick.Window 2.2
@@ -14,12 +14,13 @@ Window {
     width: base * 16
     height: base * 9
     title: qsTr("Chat App")
+//    color: "#f9f9f9"
     Row {
         Pane {
             width: base * 1
             height: parent.height
 
-            Column {
+            ColumnLayout {
                 width: parent.width
                 Item {
                     id: headerImage
@@ -31,27 +32,16 @@ Window {
                     }
                 }
                 Item {
-                    height: base
+                    height: base*0
                 }
-
-                TabItem {
-                    iconFile: "./images/ic_message_black_24dp_2x.png"
-                }
-                TabItem {
-                    iconFile: "./images/ic_account_box_black_24dp_2x.png"
-                }
-                TabItem {
-                    iconFile: "./images/ic_email_black_24dp_2x.png"
-                }
-                TabItem {
-                    iconFile: "./images/ic_settings_black_24dp_2x.png"
-                }
+                TabItem{text: "\uE0C9"}
+                TabItem{text: "\uE851"}
+                TabItem{text: "\uE0E1"}
+                TabItem{text: "\uE8B8"}
             }
 
-            TabItem {
-                anchors.bottom: parent.bottom
-                iconFile: "./images/ic_menu_black_24dp_2x.png"
-            }
+            TabItem{anchors.bottom: parent.bottom;text: "\uE5D2"}
+
         }
         Pane {
             width: base * 5
@@ -87,10 +77,11 @@ Window {
                     border.color: "black"
                     border.width: 1
                 }
-                Label {
-                    text: "+"
-                    font.pixelSize: 26
+                // <i class="material-icons">&#xE145;</i>
+                MaterialIcon{
                     anchors.centerIn: parent
+                    font.pixelSize: 26
+                    text: "\uE145"
                 }
             }
 
