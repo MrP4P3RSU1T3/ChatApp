@@ -21,8 +21,15 @@ Item {
             displayMarginEnd: 40
             verticalLayoutDirection: ListView.BottomToTop
             spacing: 12
-            model: ConversationModel {
+//            model: ConversationModel {
+//            }
+            model:jsonListModel.model
+            JSONListModel{
+                id:jsonListModel
+                source: "./data.json"
+                query: "$.conversations[*]"
             }
+
             delegate: Column {
                 id: delegate
                 anchors.right: sentByMe ? parent.right : undefined

@@ -2,6 +2,8 @@ import QtQuick 2.0
 import QtQuick.Controls 2.1
 
 ItemDelegate {
+    id:root
+    property int base: 100
     text: ""
 
     width: root.base * 5
