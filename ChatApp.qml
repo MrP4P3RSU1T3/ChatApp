@@ -91,7 +91,7 @@ ApplicationWindow {
                 width: root.base * 5
                 JSONListModel{
                 id:jsonModel1
-                source: "./data.json"
+                source: "./data/data.json"
                 query: "$.recentContacts[*]"
             }
                 model:jsonModel1.model

@@ -6,12 +6,10 @@ Item {
     property alias text: icon.text
     property alias color: icon.color
     property alias font: icon.font
-//    implicitWidth: 100
-//    implicitHeight: 100
     FontLoader {
         id: webFont;
 //        source: "./fontawesome-webfont.ttf"
-        source: "./MaterialIcons.ttf"
+        source: "./font/MaterialIcons.ttf"
         onStatusChanged:{
             console.log('FontLoader status changed ',status)
         }

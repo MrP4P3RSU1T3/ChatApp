@@ -26,7 +26,7 @@ Item {
             model:jsonListModel.model
             JSONListModel{
                 id:jsonListModel
-                source: "./data.json"
+                source: "./data/data.json"
                 query: "$.conversations[*]"
             }
 

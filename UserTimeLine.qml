@@ -32,7 +32,7 @@ Rectangle {
         height: root.height - header.height
         JSONListModel {
             id: jsonModel1
-            source: "./data.json"
+            source: "./data/data.json"
             query: "$.timeline[*]"
         }
         model: jsonModel1.model
