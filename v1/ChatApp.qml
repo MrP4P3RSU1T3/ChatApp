@@ -6,6 +6,7 @@ import QtQuick.Controls.Material 2.2
 import Qt.labs.settings 1.0
 import QtQuick.Window 2.2
 import QtGraphicalEffects 1.0
+
 ApplicationWindow {
     id: root
     property bool userInfoShow: false
